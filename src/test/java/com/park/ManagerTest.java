@@ -19,7 +19,7 @@ public class ManagerTest {
         parkingLotList.add(new ParkingLot(10));
         parkingLotList.add(new ParkingLot(3));
 
-        manager = new Manager(parkingLotList);
+        manager = new Manager(parkingLotList,StategyEnum.NORMAL);
     }
 
     @Test

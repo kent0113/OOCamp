@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class SuperManagerTest {
 
     List<ParkingLot> parkingLotList = new ArrayList<ParkingLot>();
-    Manager superManager = new Manager(parkingLotList);
+    Manager superManager = new Manager(parkingLotList,StategyEnum.SUPER);
 
     @Test
     public void should_park_in_the_most_avaiable_port_parking_lot_when_there_is_only_one_parking_lot() {

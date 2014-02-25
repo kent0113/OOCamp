@@ -20,7 +20,7 @@ public class SmartManagerTest {
         parkingLotList.add(new ParkingLot(10));
         parkingLotList.add(new ParkingLot(3));
 
-        smartManager = new Manager(parkingLotList);
+        smartManager = new Manager(parkingLotList,StategyEnum.SMART);
 
     }
 
@@ -28,7 +28,7 @@ public class SmartManagerTest {
     public void should_park_successfully_when_have_available_parking_port(){
         parkingLotList = new ArrayList<ParkingLot>();
         parkingLotList.add(new ParkingLot(10));
-        smartManager = new Manager(parkingLotList);
+        smartManager = new Manager(parkingLotList,StategyEnum.SMART);
 
         Car car = new Car();
         Receipt receipt = smartManager.park(car);
@@ -41,7 +41,7 @@ public class SmartManagerTest {
         parkingLotList = new ArrayList<ParkingLot>();
         ParkingLot mostAvailableSpaceParkingLot = new ParkingLot(3);
         parkingLotList.add(mostAvailableSpaceParkingLot);
-        smartManager = new Manager(parkingLotList);
+        smartManager = new Manager(parkingLotList,StategyEnum.SMART);
 
         Car car = new Car();
         Receipt receipt = smartManager.park(car);
@@ -55,7 +55,7 @@ public class SmartManagerTest {
         parkingLotList.add(new ParkingLot(10));
         ParkingLot mostAvailableSpaceParkingLot = new ParkingLot(20);
         parkingLotList.add(mostAvailableSpaceParkingLot);
-        smartManager = new Manager(parkingLotList);
+        smartManager = new Manager(parkingLotList,StategyEnum.SMART);
 
         Car car = new Car();
         Receipt receipt = smartManager.park(car);
@@ -73,7 +73,7 @@ public class SmartManagerTest {
         parkingLotList.add(mostAvailableSpaceParkingLot);
         parkingLotList.add(new ParkingLot(0));
         parkingLotList.add(new ParkingLot(5));
-        smartManager = new Manager(parkingLotList);
+        smartManager = new Manager(parkingLotList,StategyEnum.SMART);
 
         Car car = new Car();
         Receipt receipt = smartManager.park(car);

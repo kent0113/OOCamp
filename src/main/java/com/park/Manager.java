@@ -10,13 +10,9 @@ public class Manager {
     HashMap<Receipt, ParkingLot> receiptParkingLotHashMap = new HashMap<Receipt, ParkingLot>();
     private Stategy stategy;
 
-    private Manager(List<ParkingLot> parkingLotList, StategyEnum stategyEnum) {
+    public Manager(List<ParkingLot> parkingLotList, StategyEnum stategyEnum) {
         this.parkingLotList = parkingLotList;
         stategy = StategyFactory.getStategy(stategyEnum);
-    }
-
-    public Manager(List<ParkingLot> parkingLotList) {
-        this.parkingLotList = parkingLotList;
     }
 
     public Receipt park(Car car){
